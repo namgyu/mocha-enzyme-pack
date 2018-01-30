@@ -1,0 +1,6 @@
+--reporter
+spec
+
+--require
+babel-core/register
+test/*.setup.js
