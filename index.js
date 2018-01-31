@@ -5,22 +5,16 @@
 const fs = require('fs-extra');
 const path = require('path');
 const execSync = require('child_process').execSync;
-const pathToCopy = path.join(gitRoot, 'src/main/webapp/');
 const useNpm = shouldUseNpm();
 const useYarn = useNpm ? false : shouldUseYarn();
 
 if (useNpm) {
-    copy();
     install('npm');
-    process.exit(0);
 } else if (useYarn) {
-    copy();
     install('yarn');
-    process.exit(0);
 } else {
     console.log('Please install package manager !');
     console.log('https://yarnpkg.com/lang/en/ or https://nodejs.org/en/');
-    process.exit(1);
 }
 
 function shouldUseNpm() {
@@ -50,10 +44,11 @@ function shouldUseYarn() {
 }
 
 function copy() {
-    console.log('Copying setup.js files to your project')
+    console.log('Copying setup.js files to your project...');
+
     fs.copy(
-        path.join(__dirname, 'test/'),
-        pathToCopy,
+        path.join(__dirname, '/test/'),
+        path.join(process.cwd(), '/test/'),
         function(err) {
             if (err) return console.error(err);
             console.log('Copied successfully!');
@@ -66,6 +61,7 @@ function install(manager) {
     try {
         execSync(`${manager} ${manager === 'npm' ? 'i' : 'add'} -D mocha chai nyc enzyme enzyme-adapter-react-16 jsdom react-addons-test-utils`);
         console.log('Installed successfully!');
+        copy();
     } catch (e) {
         console.log('Failed! please retry!');
     }
