@@ -1,2 +1,2 @@
-# react-mocha-enzyme
-mocha + enzyme For React
+# mocha-enzyme-pack
+mocha + enzyme
