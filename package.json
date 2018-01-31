@@ -1,14 +1,13 @@
 {
-  "name": "react-mocha-enzyme",
+  "name": "set-mocha-enzyme",
   "version": "1.0.0",
-  "description": "mocha + enzyme for react",
-  "main": "index.js",
+  "description": "mocha + enzyme",
   "scripts": {
-    "test": "_mocha example/*.spec.js || exit 0"
+    "test": "nyc --reporter=text --reporter=html mocha || exit 0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pinkstarfish/react-mocha-enzyme.git"
+    "url": "git+https://github.com/namgyu/set-mocha-enzyme.git"
   },
   "keywords": [
     "mocha",
@@ -18,23 +17,29 @@
   "author": "Namgyu Kuk",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pinkstarfish/react-mocha-enzyme/issues"
+    "url": "https://github.com/namgyu/set-mocha-enzyme/issues"
   },
-  "homepage": "https://github.com/pinkstarfish/react-mocha-enzyme#readme",
-  "devDependencies": {
+  "homepage": "https://github.com/namgyu/set-mocha-enzyme#readme",
+  "bin": {
+    "set-mocha-enzyme": "./index.js"
+  },
+  "peerDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
+  },
+  "devDependencies": {
     "chai": "^4.1.2",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "istanbul": "^0.4.5",
     "jsdom": "^11.6.2",
     "mocha": "^5.0.0",
+    "nyc": "^11.4.1",
     "react-addons-test-utils": "^15.6.2"
   },
   "dependencies": {
+    "fs-extra": "^5.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   }
