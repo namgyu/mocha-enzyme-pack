@@ -1,5 +1,5 @@
 {
-  "name": "set-mocha-enzyme",
+  "name": "mocha-enzyme-pack",
   "version": "1.0.0",
   "description": "mocha + enzyme",
   "scripts": {
@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/namgyu/set-mocha-enzyme.git"
+    "url": "git+https://github.com/namgyu/mocha-enzyme-pack.git"
   },
   "keywords": [
     "mocha",
@@ -17,11 +17,11 @@
   "author": "Namgyu Kuk",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/namgyu/set-mocha-enzyme/issues"
+    "url": "https://github.com/namgyu/mocha-enzyme-pack/issues"
   },
-  "homepage": "https://github.com/namgyu/set-mocha-enzyme#readme",
+  "homepage": "https://github.com/namgyu/mocha-enzyme-pack#readme",
   "bin": {
-    "set-mocha-enzyme": "./index.js"
+    "mocha-enzyme-pack": "./index.js"
   },
   "peerDependencies": {
     "babel-core": "^6.26.0",
