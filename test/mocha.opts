@@ -1,6 +1,7 @@
 --reporter
-spec
+nyan
 
 --require
 babel-core/register
 test/*.setup.js
+example/**/*.spec.js
