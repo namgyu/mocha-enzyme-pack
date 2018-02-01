@@ -59,7 +59,7 @@ function install(manager) {
     console.log('Installing dependencies...');
 
     try {
-        execSync(`${manager} ${manager === 'npm' ? 'i' : 'add'} -D mocha chai nyc enzyme enzyme-adapter-react-16 jsdom react-addons-test-utils`);
+        execSync(`${manager} ${manager === 'npm' ? 'i' : 'add'} -D mocha chai nyc enzyme enzyme-adapter-react-16 jsdom`);
         console.log('Installed successfully!');
         copy();
     } catch (e) {
