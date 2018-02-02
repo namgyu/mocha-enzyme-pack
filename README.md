@@ -1,17 +1,22 @@
 # mocha-enzyme-pack
-mocha + enzyme
+> mocha + chai + nyc + enzyme(for react) + jsdom(for react)
 
-# Usage
+## Install
+```
+$ npm i mocha-enzyme-pack -g
+```
+
+## Usage
 
 ```
 //package.json
 ...
 "scripts": {
-    "test": "nyc --reporter=text --reporter=html mocha || exit 0"
+    "test:unit": "nyc --reporter=text --reporter=html mocha || exit 0"
 },
 ...
 ```
 
 ```
-$ npm run test
+$ npm run test:unit
 ```
