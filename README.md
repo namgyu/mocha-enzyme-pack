@@ -9,6 +9,10 @@ $ npm i mocha-enzyme-pack -g
 ## Usage
 
 ```
+$ mocha-enzyme-pack
+```
+
+```
 //package.json
 ...
 "scripts": {
