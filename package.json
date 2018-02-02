@@ -1,6 +1,6 @@
 {
   "name": "mocha-enzyme-pack",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "mocha + chai + sinon + nyc + enzyme + jsdom",
   "scripts": {
     "test": "nyc --reporter=text --reporter=html mocha || exit 0"
