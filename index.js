@@ -74,7 +74,8 @@ function addDependencies() {
         "enzyme-adapter-react-16": "1.1.1",
         "jsdom": "11.6.2",
         "mocha": "5.0.0",
-        "nyc": "11.4.1"
+        "nyc": "11.4.1",
+        "sinon": "4.2.2"
     };
 
     if (typeof packageJson.devDependencies === 'undefined') {

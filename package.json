@@ -1,7 +1,7 @@
 {
   "name": "mocha-enzyme-pack",
   "version": "1.0.0",
-  "description": "mocha + enzyme",
+  "description": "mocha + chai + sinon + nyc + enzyme + jsdom",
   "scripts": {
     "test": "nyc --reporter=text --reporter=html mocha || exit 0"
   },
@@ -11,7 +11,11 @@
   },
   "keywords": [
     "mocha",
+    "chai",
+    "sinon",
+    "nyc",
     "enzyme",
+    "jsdom",
     "react"
   ],
   "author": "Namgyu Kuk",
@@ -33,7 +37,8 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "jsdom": "^11.6.2",
     "mocha": "^5.0.0",
-    "nyc": "^11.4.1"
+    "nyc": "^11.4.1",
+    "sinon": "^4.2.2"
   },
   "dependencies": {
     "fs-extra": "^5.0.0",
